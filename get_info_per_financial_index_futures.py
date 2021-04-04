@@ -21,7 +21,7 @@ class FuturesInfo:
         lis = f.read()
         data_exist = lis.split(" ")
         # log in the  JQ account
-        jq.auth('18224433211', 'Haohao19971003.')
+        jq.auth('uraccount', 'urpassword')
         all_futures = jq.get_all_securities(['futures'])
         # name the index of the DataFrame
         all_futures.index.name = 'id'
@@ -91,7 +91,7 @@ class FuturesInfo:
         for key, value in futures_dict.items():
             print(key, end=":")
             print(value)
-        jq.auth('18224433211', 'Haohao19971003.')
+        jq.auth('uraccount', 'urpassword')
         count = 0
         for item in futures_dict:
             date_list = []
@@ -119,12 +119,12 @@ class FuturesInfo:
 
 
 
-# 交易所名称	编码
-# 上海期货交易所	XSGE
-# 大连商品交易所	XDCE
-# 郑州商商品交易所	XZCE
-# 中国金融期货交易所	CCFX
-# 所有期货数据 ''
+# Name of Exchange         Code
+# Shanghai Futures         XSGE
+# Dalian Commodity	  XDCE
+# Zhengzhou Commodity	  XZCE
+# China Financial Futures  CCFX
+# All futures data          ''
 # this part is used for initial downloading
 the_path = '/Users/tylerwang/Desktop/get_futures_data/'
 # get_large = FuturesInfo('2015-01-01','2015-02-01','CCFX')
