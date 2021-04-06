@@ -3,7 +3,7 @@ import time
 
 
 def do_something():
-    print("Zhanhao Wang")
+    print("let's all in")
 
 
 schedule.every(10).seconds.do(do_something)
